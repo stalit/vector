@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<stopwatchConfig>
+    <secondsAfterWork>90</secondsAfterWork>
+    <secondsBeforeWork>90</secondsBeforeWork>
+    <onTop>false</onTop>
+</stopwatchConfig>

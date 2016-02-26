@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="125.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vector.vtime.stopwatch.view.RootLayoutController">
+   <bottom>
+      <GridPane gridLinesVisible="true" prefHeight="12.0" prefWidth="220.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="151.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="149.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="currentTime" text="18:34:00 03.08.2016" GridPane.columnIndex="1" />
+            <Label fx:id="currentUser" text="user" />
+         </children>
+      </GridPane>
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openConfig" text="Config" />
+              <MenuItem mnemonicParsing="false" onAction="#handleClose" text="Close" />
+            </items>
+          </Menu>
+            <Menu disable="true" mnemonicParsing="false" text="Time" visible="false">
+              <items>
+                <MenuItem fx:id="menuStart" mnemonicParsing="false" onAction="#handleStart" text="Start" />
+                  <MenuItem fx:id="menuPause" disable="true" mnemonicParsing="false" onAction="#handlePause" text="Pause" />
+                  <MenuItem fx:id="menuResume" mnemonicParsing="false" onAction="#handleResume" text="Resume" visible="false" />
+                  <MenuItem fx:id="menuStop" disable="true" mnemonicParsing="false" onAction="#handleStop" text="Stop" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
